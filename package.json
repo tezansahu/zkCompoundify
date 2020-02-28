@@ -1,0 +1,41 @@
+{
+  "name": "zkCompoundify",
+  "version": "1.0.0",
+  "description": "ETHIndia Online project",
+  "main": "index.js",
+  "author": "Tezan <tezansahu@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tezansahu/zkCompoundify.git"
+  },
+  "engines": {
+    "yarn": "1.15.2"
+  },
+  "dependencies": {
+    "@aztec/dev-utils": "0.12.2",
+    "@aztec/protocol": "0.9.1",
+    "@aztec/secp256k1": "1.0.1",
+    "aztec.js": "0.11.0",
+    "dotenv": "^8.0.0",
+    "ethereum-ens": "^0.7.7",
+    "ethlint": "^1.2.2",
+    "express": "^4.17.1",
+    "truffle-contract": "^4.0.31",
+    "truffle-hdwallet-provider": "^1.0.15",
+    "web3": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "bignumber.js": "8.0.1"
+  },
+  "keywords": [
+    "Compound",
+    "AZTEC",
+    "Torus",
+    "ETHIndia"
+  ],
+  "bugs": {
+    "url": "https://github.com/tezansahu/zkCompoundify/issues"
+  },
+  "homepage": "https://github.com/tezansahu/zkCompoundify#readme"
+}
