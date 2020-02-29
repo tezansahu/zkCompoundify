@@ -37,7 +37,12 @@ async function mintDAI2(amount, callback){
     account = accounts[2];
     let chainID  = await web3.eth.net.getId();
     let DAIInstance = new web3.eth.Contract(DaiJSON.abi, DaiJSON.networks[chainID]["address"]);
-    let tx = await DAIInstance.methods.mint(account, amount).send({from: account});
+    let tx = await web3.eth.sendTransaction({
+        "from": account,
+        "to": "0x0000000000000000000000000000000000000000",
+        "value": eth
+    })
+    tx = await DAIInstance.methods.mint(account, amount).send({from: account});
     callback(tx["transactionHash"]);
 }
 

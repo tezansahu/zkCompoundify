@@ -25,7 +25,7 @@ function getBalDai(){
     theUrl = "http://127.0.0.1:3000/ethBalanceDai?accountIndex=2"
     doCall(theUrl, (res) => {
         let a = res.toString();
-        document.getElementById('daiBal').innerHTML = `<span class="count">${a.slice(a.length - 6)}</span>`;
+        document.getElementById('daiBal').innerHTML = `<span class="count">${a}</span>`;
     })
 }
 

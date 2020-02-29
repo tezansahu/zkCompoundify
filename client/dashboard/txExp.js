@@ -32,7 +32,7 @@ function txExp(){
                     document.getElementById('notifiactionManager').innerHTML += `   <li>
                     <div class="msg-received msg-container">
                             <div class="avatar">
-                                <img src="images/saru.JPG" alt="">
+                                <img src="images/tezan.jpg" alt="">
                                 <!-- <div class="send-time">12.11 pm</div> -->
                             </div>
                             <div class="msg-box">
