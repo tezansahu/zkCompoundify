@@ -39,6 +39,7 @@ function conEthToDai(){
     let daiVal = document.getElementById('ethToDaiDai').value;
     doCall(`${url}/ethToDai2?amount=${daiVal}`, (res) => {
         console.log(res);
+        getBalDai()
     })
 }
 

@@ -14,7 +14,7 @@ app.all('/*', function(req, res, next) {
 });
 
 app.get('/', (req,res) => {
-    res.send('Saru')
+    res.send('ZkCompound')
 })
 
 app.get('/ethBalance', (req,res) => {
@@ -29,7 +29,7 @@ app.get('/ethBalanceDai', (req,res) => {
 })
 
 app.get('/ethToDai', (req,res) => {
-    DAI.mintDAI(req.query.amount, (txHash) => {
+    DAI.mintDAI(req.query.amount, req.query.eth, (txHash) => {
         res.send(txHash);
     })
 })

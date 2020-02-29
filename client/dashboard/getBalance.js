@@ -25,7 +25,8 @@ function getBalDai(){
     theUrl = "http://127.0.0.1:3000/ethBalanceDai?accountIndex=1"
     doCall(theUrl, (res) => {
         let a = res.toString();
-        document.getElementById('daiBal').innerHTML = `<span class="count">${a.slice(a.length - 6)}</span>`;
+        console.log(a);
+        document.getElementById('daiBal').innerHTML = `<span class="count">${a}</span>`;
     })
 }
 
@@ -37,8 +38,12 @@ function populateDAI(){
 
 function conEthToDai(){
     let daiVal = document.getElementById('ethToDaiDai').value;
-    doCall(`${url}/ethToDai?amount=${daiVal}`, (res) => {
+    let ethVal = document.getElementById('ethToDaiEth').value * Math.pow(10, 18);
+    console.log(ethVal);
+    doCall(`${url}/ethToDai?amount=${daiVal}&eth=${ethVal}`, (res) => {
         console.log(res);
+        getBalDai();
+        getBal()
     })
 }
 
@@ -50,7 +55,9 @@ function conDaiToZk() {
             value: daiVal,
             spent: 0
         });
+        getBalDai()
     })
+    
 }
 function zktoc(amount) {
     //let daiVal = document.getElementById('daiToZkDaiDai').value;

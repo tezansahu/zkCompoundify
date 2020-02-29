@@ -48,6 +48,16 @@ module.exports = {
      network_id: "*",       // Any network (default: none)
     },
 
+    matic: {
+      provider: function() {
+        return new HDWalletProvider("differ idle retire demise glare sentence glove hammer iron mango way empty", `https://testnet2.matic.network`)
+      },
+      network_id: 8995,
+      gas: 80000,
+      gasPrice: 0,
+      skipDryRun: true
+    },
+
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port

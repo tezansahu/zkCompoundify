@@ -160,7 +160,7 @@ contract DAI is IERC20 {
      * @param account The account whose tokens will be burnt.
      * @param value The amount that will be burnt.
      */
-    function _burn(address account, uint256 value) internal {
+    function burn(address account, uint256 value) public {
         require(account != address(0), "ERC20: burn from the zero address");
 
         _totalSupply = _totalSupply.sub(value);
@@ -189,9 +189,9 @@ contract DAI is IERC20 {
      * Emits an Approval event (reflecting the reduced allowance).
      * @param account The account whose tokens will be burnt.
      * @param value The amount that will be burnt.
-     */
-    function _burnFrom(address account, uint256 value) internal {
-        _burn(account, value);
+     */ 
+    function burnFrom(address account, uint256 value) public {
+        burn(account, value);
         _approve(account, msg.sender, _allowances[account][msg.sender].sub(value));
     }
     
