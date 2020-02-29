@@ -1,0 +1,184 @@
+/* line 1, ../sass/components/_progress.scss */
+
+h1{
+    font-size: 20px;
+  }
+  .text-center{
+    text-align: center;
+  }
+  h3{
+    font-size: 16px;
+  }
+  .progress {
+    margin: 0;
+    padding-top: 10px;
+    list-style: none;
+    color: #000000;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  /* line 11, ../sass/components/_progress.scss */
+  .progress.vertical > li {
+    display: block;
+    min-height: 44px;
+    margin-left: 30px;
+    text-align: left;
+  }
+  /* line 17, ../sass/components/_progress.scss */
+  .progress.vertical > li:first-child:after {
+    display: block;
+  }
+  /* line 22, ../sass/components/_progress.scss */
+  .progress.vertical > li:last-child:after {
+    display: none;
+  }
+  /* line 27, ../sass/components/_progress.scss */
+  .progress.vertical > li.active:after {
+    background: #b7b7b7;
+  }
+  /* line 31, ../sass/components/_progress.scss */
+  .progress.vertical > li:after {
+    width: 2px;
+    height: 100%;
+    display: block;
+    left: -20px;
+    top: 0;
+    margin-left: 0;
+  }
+  /* line 39, ../sass/components/_progress.scss */
+  .progress.vertical > li:before {
+    float: left;
+    display: inline-block;
+    margin-left: -30px;
+    position: absolute;
+  }
+  /* line 47, ../sass/components/_progress.scss */
+  .progress.vertical.right > li {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  /* line 50, ../sass/components/_progress.scss */
+  .progress.vertical.right > li:before {
+    margin-left: 0;
+    margin-right: -30px;
+    right: 0;
+  }
+  /* line 55, ../sass/components/_progress.scss */
+  .progress.vertical.right > li:after {
+    right: -20px;
+    left: auto;
+  }
+  /* line 62, ../sass/components/_progress.scss */
+  .progress.vertical.center > li {
+    margin-left: 0;
+    float: left;
+    width: 50%;
+    clear: right;
+    padding-right: 30px;
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  /* line 70, ../sass/components/_progress.scss */
+  .progress.vertical.center > li > .progress-icon {
+    border: 1px solid #b7b7b7;
+    padding: 5px 10px;
+    background: #ffffff;
+  }
+  /* line 74, ../sass/components/_progress.scss */
+  .progress.vertical.center > li > .progress-icon:before {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #b7b7b7;
+    content: '';
+    position: absolute;
+    right: 23px;
+    top: 15px;
+    margin-top: -10px;
+  }
+  /* line 87, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:before {
+    right: -11px;
+    left: auto;
+    margin-left: 0;
+  }
+  /* line 92, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:after {
+    right: -1px;
+    left: auto;
+  }
+  /* line 96, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:nth-child(2n) {
+    float: right;
+    clear: left;
+    padding-left: 30px;
+    margin: 0;
+    padding-right: 0;
+  }
+  /* line 103, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:nth-child(2n) > .progress-icon:before {
+    border-left: 0 none;
+    border-right: 8px solid #b7b7b7;
+    right: auto;
+    left: 23px;
+  }
+  /* line 110, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:nth-child(2n):before {
+    left: -11px;
+    right: auto;
+  }
+  /* line 114, ../sass/components/_progress.scss */
+  .progress.vertical.center > li:nth-child(2n):after {
+    left: -1px;
+    right: auto;
+  }
+  /* line 122, ../sass/components/_progress.scss */
+  .progress > li {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+  }
+  /* line 127, ../sass/components/_progress.scss */
+  .progress > li.active:before {
+    background: #008000;
+  }
+  /* line 130, ../sass/components/_progress.scss */
+  .progress > li.active:after {
+    background: #008000;
+  }
+  /* line 134, ../sass/components/_progress.scss */
+  .progress > li:before {
+    position: relative;
+    content: attr(data-step);
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin: 0 auto 2px;
+    line-height: 22px;
+    background: #ea7f7f;
+    border-radius: 100%;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+  }
+  /* line 148, ../sass/components/_progress.scss */
+  .progress > li:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    display: block;
+    top: 11px;
+    left: -50%;
+    content: '';
+    background: #b7b7b7;
+    margin-left: 2px;
+    z-index: -1;
+  }
+  /* line 161, ../sass/components/_progress.scss */
+  .progress > li:first-child:after {
+    display: none;
+  }
